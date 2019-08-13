@@ -53,6 +53,7 @@ class App extends React.Component {
       return (
         <div>
           <Header
+            data-cy="header"
             appName={this.props.appName}
             currentUser={this.props.currentUser} />
             <Switch>
@@ -72,6 +73,7 @@ class App extends React.Component {
     return (
       <div>
         <Header
+          data-cy="header"
           appName={this.props.appName}
           currentUser={this.props.currentUser} />
       </div>

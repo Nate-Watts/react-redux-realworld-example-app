@@ -67,6 +67,7 @@ class SettingsForm extends React.Component {
 
           <fieldset className="form-group">
             <input
+              data-cy="profile-url"
               className="form-control"
               type="text"
               placeholder="URL of profile picture"
@@ -76,6 +77,7 @@ class SettingsForm extends React.Component {
 
           <fieldset className="form-group">
             <input
+              data-cy="username"
               className="form-control form-control-lg"
               type="text"
               placeholder="Username"
@@ -85,6 +87,7 @@ class SettingsForm extends React.Component {
 
           <fieldset className="form-group">
             <textarea
+              data-cy="bio"
               className="form-control form-control-lg"
               rows="8"
               placeholder="Short bio about you"
@@ -95,6 +98,7 @@ class SettingsForm extends React.Component {
 
           <fieldset className="form-group">
             <input
+              data-cy="email"
               className="form-control form-control-lg"
               type="email"
               placeholder="Email"
@@ -104,6 +108,7 @@ class SettingsForm extends React.Component {
 
           <fieldset className="form-group">
             <input
+              data-cy="password"
               className="form-control form-control-lg"
               type="password"
               placeholder="New Password"
@@ -112,6 +117,7 @@ class SettingsForm extends React.Component {
           </fieldset>
 
           <button
+            data-cy="update-settings"
             className="btn btn-lg btn-primary pull-xs-right"
             type="submit"
             disabled={this.state.inProgress}>

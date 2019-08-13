@@ -60,6 +60,7 @@ class Login extends React.Component {
 
                   <fieldset className="form-group">
                     <input
+                      data-cy="email"
                       className="form-control form-control-lg"
                       type="email"
                       placeholder="Email"
@@ -69,6 +70,7 @@ class Login extends React.Component {
 
                   <fieldset className="form-group">
                     <input
+                      data-cy="password"
                       className="form-control form-control-lg"
                       type="password"
                       placeholder="Password"
@@ -77,6 +79,7 @@ class Login extends React.Component {
                   </fieldset>
 
                   <button
+                    data-cy="submit"
                     className="btn btn-lg btn-primary pull-xs-right"
                     type="submit"
                     disabled={this.props.inProgress}>

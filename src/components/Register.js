@@ -55,7 +55,7 @@ class Register extends React.Component {
             <div className="col-md-6 offset-md-3 col-xs-12">
               <h1 className="text-xs-center">Sign Up</h1>
               <p className="text-xs-center">
-                <Link to="/login">
+                <Link data-cy="have-an-account" to="/login">
                   Have an account?
                 </Link>
               </p>
@@ -67,6 +67,7 @@ class Register extends React.Component {
 
                   <fieldset className="form-group">
                     <input
+                      data-cy="username"
                       className="form-control form-control-lg"
                       type="text"
                       placeholder="Username"
@@ -76,6 +77,7 @@ class Register extends React.Component {
 
                   <fieldset className="form-group">
                     <input
+                      data-cy="email"
                       className="form-control form-control-lg"
                       type="email"
                       placeholder="Email"
@@ -85,6 +87,7 @@ class Register extends React.Component {
 
                   <fieldset className="form-group">
                     <input
+                      data-cy="password"
                       className="form-control form-control-lg"
                       type="password"
                       placeholder="Password"
@@ -93,6 +96,7 @@ class Register extends React.Component {
                   </fieldset>
 
                   <button
+                    data-cy="sign-up"
                     className="btn btn-lg btn-primary pull-xs-right"
                     type="submit"
                     disabled={this.props.inProgress}>

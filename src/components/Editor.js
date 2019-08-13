@@ -105,6 +105,7 @@ class Editor extends React.Component {
 
                   <fieldset className="form-group">
                     <input
+                      data-cy="article-title"
                       className="form-control form-control-lg"
                       type="text"
                       placeholder="Article Title"
@@ -114,6 +115,7 @@ class Editor extends React.Component {
 
                   <fieldset className="form-group">
                     <input
+                      data-cy="article-describe"
                       className="form-control"
                       type="text"
                       placeholder="What's this article about?"
@@ -123,6 +125,7 @@ class Editor extends React.Component {
 
                   <fieldset className="form-group">
                     <textarea
+                      data-cy="article-body"
                       className="form-control"
                       rows="8"
                       placeholder="Write your article (in markdown)"
@@ -133,6 +136,7 @@ class Editor extends React.Component {
 
                   <fieldset className="form-group">
                     <input
+                      data-cy="article-tags"
                       className="form-control"
                       type="text"
                       placeholder="Enter tags"
@@ -144,8 +148,10 @@ class Editor extends React.Component {
                       {
                         (this.props.tagList || []).map(tag => {
                           return (
-                            <span className="tag-default tag-pill" key={tag}>
-                              <i  className="ion-close-round"
+                            <span data-cy={tag} className="tag-default tag-pill" key={tag}>
+                              <i  
+                                  data-cy={"remove " + tag}
+                                  className="ion-close-round"
                                   onClick={this.removeTagHandler(tag)}>
                               </i>
                               {tag}
@@ -157,6 +163,7 @@ class Editor extends React.Component {
                   </fieldset>
 
                   <button
+                    data-cy="publish-article"
                     className="btn btn-lg pull-xs-right btn-primary"
                     type="button"
                     disabled={this.props.inProgress}

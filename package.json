@@ -27,7 +27,8 @@
     "start": "cross-env PORT=4100 react-scripts start",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
-    "test": "$(npm bin)/cypress run --spec 'cypress/integration/minion1.spec.js'",
-    "test2": "$(npm bin)/cypress run --spec 'cypress/integration/minion2.spec.js'"
+    "test": "$(npm bin)/cypress run --spec 'cypress/integration/create-article.spec.js' --headed --no-exit",
+    "test2": "$(npm bin)/cypress run --spec 'cypress/integration/settings.spec.js' --headed --no-exit",
+    "cy:open": "$(npm bin)/cypress open" 
   }
 }
