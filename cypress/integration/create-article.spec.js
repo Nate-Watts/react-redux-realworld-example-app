@@ -1,3 +1,4 @@
+// @ts-nocheck
 const dataTag = 
 
 describe('minion1', () => {
@@ -12,5 +13,6 @@ describe('minion1', () => {
         cy.get(`[data-cy="remove first tag"]`).should('not.be.visible');
         cy.get(`[data-cy=article-tags]`).click().type('last tag').type('{enter}');
         cy.get(`[data-cy="last tag"]`).should('be.visible');
+        
     });
 });
